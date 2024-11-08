@@ -1,22 +1,29 @@
 // trigger to play music in the background with sweetalert
-window.addEventListener('load', () => {
-    Swal.fire({
-        title: 'Do you want to play music in the background?',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes',
-        cancelButtonText: 'No',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            document.querySelector('.song').play();
-            animationTimeline();
-        } else {
-            animationTimeline();
-        }
-    });
-});
+// window.addEventListener('load', () => {
+//     Swal.fire({
+//         title: 'Do you want to play music in the background?',
+//         icon: 'warning',
+//         showCancelButton: true,
+//         confirmButtonColor: '#3085d6',
+//         cancelButtonColor: '#d33',
+//         confirmButtonText: 'Yes',
+//         cancelButtonText: 'No',
+//     }).then((result) => {
+//         if (result.isConfirmed) {
+//             document.querySelector('.song').play();
+//             animationTimeline();
+//         } else {
+//             animationTimeline();
+//         }
+//     });
+// });
+
+
+
+const main = () => {
+    document.querySelector('.song').play();
+    animationTimeline();
+}
 
 
 // animation timeline
@@ -53,39 +60,39 @@ const animationTimeline = () => {
     tl.to(".container", 0.6, {
         visibility: "visible"
     })
-    .from(".one", 0.7, {
-        opacity: 0,
-        y: 10
-    })
-    .from(".two", 0.4, {
-        opacity: 0,
-        y: 10
-    })
-    .to(".one",
-        0.7,
-        {
-            opacity: 0,
-            y: 10
-        },
-    "+=3.5")
-    .to(".two",
-        0.7,
-        {
-            opacity: 0,
-            y: 10
-        },
-    "-=1")
-    .from(".three", 0.7, {
-        opacity: 0,
-        y: 10
-    })
-    .to(".three",
-        0.7,
-        {
-            opacity: 0,
-            y: 10
-        },
-    "+=3")
+    // .from(".one", 0.7, {
+    //     opacity: 0,
+    //     y: 10
+    // })
+    // .from(".two", 0.4, {
+    //     opacity: 0,
+    //     y: 10
+    // })
+    // .to(".one",
+    //     0.7,
+    //     {
+    //         opacity: 0,
+    //         y: 10
+    //     },
+    // "+=3.5")
+    // .to(".two",
+    //     0.7,
+    //     {
+    //         opacity: 0,
+    //         y: 10
+    //     },
+    // "-=1")
+    // .from(".three", 0.7, {
+    //     opacity: 0,
+    //     y: 10
+    // })
+    // .to(".three",
+    //     0.7,
+    //     {
+    //         opacity: 0,
+    //         y: 10
+    //     },
+    // "+=3")
     .from(".four", 0.7, {
         scale: 0.2,
         opacity: 0,
@@ -142,7 +149,7 @@ const animationTimeline = () => {
     .to(
         ".idea-5 span",
         0.7, {
-            rotation: 90,
+            rotation: -90,
             x: 8,
         },
         "+=1.4"
@@ -246,7 +253,7 @@ const animationTimeline = () => {
             opacity: 0,
             scale: 80,
             repeat: 3,
-            repeatDelay: 1.4,
+            repeatDelay: 1,
         },
         0.3
     )
@@ -270,3 +277,5 @@ const animationTimeline = () => {
         tl.restart();
     });
 }
+
+main();
