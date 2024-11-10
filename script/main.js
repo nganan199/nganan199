@@ -1,27 +1,6 @@
-// trigger to play music in the background with sweetalert
-// window.addEventListener('load', () => {
-//     Swal.fire({
-//         title: 'Do you want to play music in the background?',
-//         icon: 'warning',
-//         showCancelButton: true,
-//         confirmButtonColor: '#3085d6',
-//         cancelButtonColor: '#d33',
-//         confirmButtonText: 'Yes',
-//         cancelButtonText: 'No',
-//     }).then((result) => {
-//         if (result.isConfirmed) {
-//             document.querySelector('.song').play();
-//             animationTimeline();
-//         } else {
-//             animationTimeline();
-//         }
-//     });
-// });
-
-
 
 const main = () => {
-    document.querySelector('.song').play();
+    // document.querySelector('.song').play();
     animationTimeline();
 }
 
@@ -120,15 +99,15 @@ const animationTimeline = () => {
             y: -150
         },
     "+=1")
-    .from(".idea-1", 0.7, ideaTextTrans)
-    .to(".idea-1", 0.7, ideaTextTransLeave, "+=2.5")
-    .from(".idea-2", 0.7, ideaTextTrans)
-    .to(".idea-2", 0.7, ideaTextTransLeave, "+=2.5")
-    .from(".idea-3", 0.7, ideaTextTrans)
+    .from(".idea-1", 0.2, ideaTextTrans)
+    .to(".idea-1", 0.2, ideaTextTransLeave, "+=2.5")
+    .from(".idea-2", 0.2, ideaTextTrans)
+    .to(".idea-2", 0.2, ideaTextTransLeave, "+=2.5")
+    .from(".idea-3", 0.2, ideaTextTrans)
     .to(".idea-3 strong", 0.5, {
         scale: 1.2,
         x: 10,
-        backgroundColor: "rgb(21, 161, 237)",
+        backgroundColor: "rgb(254, 92, 92)",
         color: "#fff",
     })
     .to(".idea-3", 0.7, ideaTextTransLeave, "+=2.5")

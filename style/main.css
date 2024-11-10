@@ -114,6 +114,8 @@ body {
   /* transform: scale(0.1); */
   top: -35%;
   width: 80px;
+  margin-left: 5rem;
+  margin-top: 2rem;
 }
 
 .baloons img {
@@ -269,7 +271,7 @@ body {
   }
 
   .idea-6 span {
-    font-size: 10rem;
+    font-size: 3rem;
   }
 
   .six .hat {
